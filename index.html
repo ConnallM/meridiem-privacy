@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridiem — Privacy Policy</title>
+<style>
+  :root{
+    --bg:#0e0b1a; --panel:#171130; --ink:#ece9ff; --muted:#a49fd0;
+    --line:#2c2350; --accent:#ff5f9e; --accent2:#8a7bff; --gold:#ffcf5c;
+    --link:#9fb4ff;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f5f3ff; --panel:#ffffff; --ink:#1c1636; --muted:#5a5480;
+      --line:#e4defb; --link:#5b46d6; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:0 20px 80px;
+  }
+  .wrap{max-width:720px; margin:0 auto}
+  header.hero{
+    margin:0 -20px 40px; padding:56px 20px 40px; text-align:center;
+    background:
+      radial-gradient(120% 140% at 50% -10%, rgba(255,95,158,.35), transparent 60%),
+      linear-gradient(180deg, #201641, var(--bg));
+    border-bottom:1px solid var(--line);
+  }
+  @media (prefers-color-scheme: light){
+    header.hero{background:
+      radial-gradient(120% 140% at 50% -10%, rgba(255,95,158,.28), transparent 62%),
+      linear-gradient(180deg,#efe9ff,var(--bg));}
+  }
+  .mark{
+    display:inline-block; font-weight:700; letter-spacing:.02em; font-size:15px;
+    text-transform:uppercase; color:var(--muted); margin-bottom:14px;
+  }
+  h1{
+    margin:.1em 0 .35em; font-size:34px; line-height:1.15; font-weight:800;
+    background:linear-gradient(90deg,var(--accent2),var(--accent),var(--gold));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .eff{color:var(--muted); font-size:14px; margin:0}
+  nav.top{
+    display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:24px;
+  }
+  nav.top a{
+    font-size:14px; text-decoration:none; color:var(--ink);
+    border:1px solid var(--line); border-radius:999px; padding:7px 15px;
+    background:var(--panel); transition:border-color .15s;
+  }
+  nav.top a[aria-current]{border-color:var(--accent); color:var(--accent)}
+  nav.top a:hover{border-color:var(--accent2)}
+  h2{
+    margin:44px 0 12px; font-size:21px; font-weight:700;
+    padding-top:12px; border-top:1px solid var(--line);
+  }
+  h2:first-of-type{border-top:0}
+  h3{margin:26px 0 8px; font-size:16px; font-weight:700; color:var(--ink)}
+  p,li{color:var(--ink)}
+  a{color:var(--link)}
+  .lead{font-size:18px; color:var(--ink)}
+  .callout{
+    background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent);
+    border-radius:12px; padding:16px 18px; margin:22px 0;
+  }
+  .callout strong{color:var(--accent)}
+  ul{padding-left:22px} li{margin:6px 0}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14.5px; display:block; overflow-x:auto}
+  th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top}
+  th{color:var(--muted); font-weight:600; white-space:nowrap}
+  footer{margin-top:56px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
+  code{background:var(--panel); border:1px solid var(--line); border-radius:5px; padding:1px 6px; font-size:13.5px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <span class="mark">Meridiem</span>
+  <h1>Privacy Policy</h1>
+  <p class="eff">Effective&nbsp;19&nbsp;July&nbsp;2026 · Last updated&nbsp;19&nbsp;July&nbsp;2026</p>
+  <nav class="top">
+    <a href="./" aria-current="page">Privacy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<div class="wrap">
+  <p class="lead">Meridiem is built so your health data never leaves your control. This policy explains, in plain language, exactly what the app touches and where it goes.</p>
+
+  <div class="callout">
+    <strong>The short version.</strong> Everything Meridiem calculates stays on your device. There are no accounts, no ads, no analytics, and no servers of ours — because we don't run any. Your skin type, exposure history, and limits sync only through your own private iCloud. We never see your data, and we never sell or share it.
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>Meridiem ("the app") is developed and published by Connall Milberry ("we", "us", "our"). If you have any questions about this policy or your privacy, contact us at <a href="mailto:connall@milberry.net">connall@milberry.net</a>.</p>
+
+  <h2>2. Our approach: on-device by design</h2>
+  <p>Meridiem is a local-first app. The exposure engine runs entirely on your Apple Watch and iPhone. We do not operate any servers, we do not have a backend, and there is no Meridiem account to create. Data you might reasonably consider sensitive — your skin type, your sun-exposure history, your daily limits — is stored on your device and, if you use iCloud, in your own private Apple iCloud storage. It is never transmitted to us.</p>
+
+  <h2>3. Data the app uses</h2>
+  <p>To do its job, Meridiem reads the following on your device. In each case the data is used only to calculate and display your sun exposure and related metrics.</p>
+
+  <table>
+    <tr><th>Data</th><th>Source</th><th>Why it's used</th><th>Where it goes</th></tr>
+    <tr>
+      <td>Time in Daylight, Sleep, and Workout details (including the indoor/outdoor flag)</td>
+      <td>Apple HealthKit (read-only)</td>
+      <td>To measure how long you've been in daylight, detect when you wake for the morning check-in, and tell indoor from outdoor time</td>
+      <td>Stays on device. Never written back to Health, never sent to us</td>
+    </tr>
+    <tr>
+      <td>Approximate and precise location</td>
+      <td>Apple Core Location</td>
+      <td>To look up the real UV index where you are (via Apple WeatherKit) and to estimate elevation and indoor/outdoor status</td>
+      <td>Processed on device. Coordinates are sent to Apple to retrieve weather (see §4). Not stored or transmitted by us</td>
+    </tr>
+    <tr>
+      <td>UV index and forecast</td>
+      <td>Apple WeatherKit</td>
+      <td>To calculate your UV dose against your personal limit</td>
+      <td>Cached on device</td>
+    </tr>
+    <tr>
+      <td>Skin type, medication sensitivity, calibration responses, exposure history</td>
+      <td>You (during setup and use)</td>
+      <td>To build and refine your personal sun limit</td>
+      <td>Stored on device; optionally synced through your private iCloud</td>
+    </tr>
+  </table>
+
+  <h3>Health &amp; fitness data — our commitment</h3>
+  <p>Meridiem's use of Apple HealthKit data is governed by Apple's requirements. We want to be explicit:</p>
+  <ul>
+    <li>We <strong>never</strong> use health or fitness data for advertising or marketing.</li>
+    <li>We <strong>never</strong> sell health or fitness data, or share it with data brokers, advertising networks, or any third party.</li>
+    <li>Health data is used <strong>solely</strong> to provide the app's features on your device.</li>
+    <li>Meridiem reads from Health only. It does not write any data into Apple Health.</li>
+  </ul>
+
+  <h2>4. Third-party services</h2>
+  <p>Meridiem does not embed any third-party analytics, advertising, tracking, or crash-reporting software. The only external services it relies on are provided by Apple as part of the operating system:</p>
+  <ul>
+    <li><strong>Apple WeatherKit</strong> — to fetch the UV index and forecast for your location. Your location is sent to Apple to return the weather. This is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a> and WeatherKit terms.</li>
+    <li><strong>Apple iCloud</strong> — if enabled on your device, your profile and history sync across your own devices through your private iCloud. This is Apple infrastructure tied to your Apple Account; we have no access to it. Governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+  </ul>
+  <p>We receive nothing from these services about you.</p>
+
+  <h2>5. Notifications</h2>
+  <p>Meridiem can send you local notifications — for example, a heads-up before you reach your daily limit, an extreme-UV warning, or a sunscreen reapply reminder during a sun session. These are scheduled and delivered entirely on your device. No notification content is sent through any server of ours.</p>
+
+  <h2>6. What we collect: nothing</h2>
+  <p>We do not collect, receive, store, or have access to any personal data, usage data, or health data. Because Meridiem has no backend and no analytics, there is simply no channel through which your information could reach us. For Apple's App Privacy questionnaire, Meridiem's data is <strong>not collected</strong> by the developer and <strong>not used to track</strong> you.</p>
+
+  <h2>7. Data retention and deletion</h2>
+  <p>Because your data lives on your device (and optionally in your iCloud), you are always in control:</p>
+  <ul>
+    <li><strong>Delete on-device data</strong> by deleting the app. This removes Meridiem's local storage.</li>
+    <li><strong>Delete synced data</strong> by managing Meridiem's data in <em>Settings → [your name] → iCloud</em> on your device.</li>
+    <li><strong>Revoke access</strong> to Health or Location at any time in the iOS Settings app; the app continues to run with reduced functionality.</li>
+  </ul>
+
+  <h2>8. Children's privacy</h2>
+  <p>Meridiem is not directed to children and does not knowingly collect information from children. As described above, we do not collect personal information from anyone.</p>
+
+  <h2>9. Your rights</h2>
+  <p>Depending on where you live, you may have rights under laws such as the GDPR (EU/UK) or the CCPA (California) to access, correct, or delete your personal data. Because we hold no personal data about you, there is nothing for us to retrieve, correct, or erase on our side — you already hold and control all of it on your own device and iCloud. We do not sell personal information.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>If we change this policy, we will update the "Last updated" date above and, where appropriate, note the change in the app or its App Store release notes. Continued use of Meridiem after a change means you accept the revised policy.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions, concerns, or requests? Email <a href="mailto:connall@milberry.net">connall@milberry.net</a> and we'll get back to you.</p>
+
+  <footer>
+    Meridiem · Privacy Policy · © 2026 Connall Milberry ·
+    <a href="terms.html">Terms of Use</a> ·
+    <a href="support.html">Support</a>
+  </footer>
+</div>
+</body>
+</html>
