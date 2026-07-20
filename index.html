@@ -3,134 +3,232 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0A0A12">
 <title>Meridiem — Privacy Policy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='1'%20x2='0'%20y2='0'%3E%3Cstop%20offset='0'%20stop-color='%232f7bf5'/%3E%3Cstop%20offset='0.41'%20stop-color='%232f7bf5'/%3E%3Cstop%20offset='0.5'%20stop-color='%236b50e0'/%3E%3Cstop%20offset='0.59'%20stop-color='%239a3fd8'/%3E%3Cstop%20offset='0.67'%20stop-color='%23c93cc0'/%3E%3Cstop%20offset='0.75'%20stop-color='%23ee4a9c'/%3E%3Cstop%20offset='0.82'%20stop-color='%23ff5a82'/%3E%3Cstop%20offset='0.89'%20stop-color='%23ff7a55'/%3E%3Cstop%20offset='0.95'%20stop-color='%23ff9e3c'/%3E%3Cstop%20offset='1'%20stop-color='%23ffd24a'/%3E%3C/linearGradient%3E%3CclipPath%20id='c'%3E%3Crect%20x='0'%20y='0'%20width='512'%20height='296.96'/%3E%3C/clipPath%3E%3Cmask%20id='m'%3E%3Crect%20width='512'%20height='512'%20fill='white'/%3E%3Crect%20x='90.419'%20y='147.546'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3Crect%20x='90.419'%20y='185.629'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3Crect%20x='90.419'%20y='217.559'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3Crect%20x='90.419'%20y='242.772'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3Crect%20x='90.419'%20y='267.984'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3Crect%20x='90.419'%20y='293.197'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3C/mask%3E%3C/defs%3E%3Cg%20clip-path='url(%23c)'%3E%3Ccircle%20cx='256'%20cy='269.865'%20r='150.528'%20fill='url(%23g)'%20mask='url(%23m)'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
+  /* ── Meridiem web tokens — mirrors DesignTokens.swift (Meridiem.Palette) ── */
   :root{
-    --bg:#0e0b1a; --panel:#171130; --ink:#ece9ff; --muted:#a49fd0;
-    --line:#2c2350; --accent:#ff5f9e; --accent2:#8a7bff; --gold:#ffcf5c;
-    --link:#9fb4ff;
-  }
-  @media (prefers-color-scheme: light){
-    :root{ --bg:#f5f3ff; --panel:#ffffff; --ink:#1c1636; --muted:#5a5480;
-      --line:#e4defb; --link:#5b46d6; }
+    --bg:#0A0A12;                        /* Palette.bg (Midnight) */
+    --panel:#111120;                     /* Palette.panel */
+    --panel2:#16162A;                    /* Palette.panel2 */
+    --hairline:rgba(255,255,255,.08);    /* Palette.border */
+    --hairline-strong:rgba(255,255,255,.16); /* Palette.borderStrong */
+    --ink:#E0E0F0;                       /* Palette.text */
+    --ink2:rgba(255,255,255,.55);        /* Palette.text2 */
+    --ink3:rgba(255,255,255,.50);        /* Palette.text3 */
+    --rose:#FF5A92;                      /* Palette.pink — the one ramp colour allowed on chrome */
+    --rose-a55:rgba(255,90,146,.55);
+    --rose-a35:rgba(255,90,146,.35);
+    --font-display:"Audiowide",sans-serif;         /* numbers & brand only */
+    --font-body:"Chakra Petch",-apple-system,sans-serif;
+    --font-label:"Share Tech Mono",ui-monospace,monospace;
+    --ease-out:cubic-bezier(.22,1,.36,1);
   }
   *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
+  html{background:var(--bg);-webkit-text-size-adjust:100%}
   body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    padding:0 20px 80px;
+    margin:0; background:transparent; color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.7;
+    padding:0 24px 72px;
   }
+  /* MeridiemSurface scanlines — backdrop only, per the design system */
+  body::before{
+    content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background:repeating-linear-gradient(to bottom, rgba(0,0,0,.18) 0 1px, transparent 1px 3px);
+    opacity:.35;
+  }
+  .skip{
+    position:absolute; left:-9999px; top:0; background:var(--panel2); color:var(--ink);
+    padding:10px 18px; border-radius:999px; z-index:10;
+  }
+  .skip:focus{left:24px; top:12px}
   .wrap{max-width:720px; margin:0 auto}
-  header.hero{
-    margin:0 -20px 40px; padding:56px 20px 40px; text-align:center;
-    background:
-      radial-gradient(120% 140% at 50% -10%, rgba(255,95,158,.35), transparent 60%),
-      linear-gradient(180deg, #201641, var(--bg));
-    border-bottom:1px solid var(--line);
+
+  /* ── Site header: sun mark + wordmark + nav ── */
+  header.site{
+    max-width:720px; margin:0 auto; padding:22px 0 18px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    border-bottom:1px solid var(--hairline);
   }
-  @media (prefers-color-scheme: light){
-    header.hero{background:
-      radial-gradient(120% 140% at 50% -10%, rgba(255,95,158,.28), transparent 62%),
-      linear-gradient(180deg,#efe9ff,var(--bg));}
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+  .brand svg{width:34px; height:34px; display:block}
+  .wordmark{font-family:var(--font-display); font-size:19px; color:var(--ink)}
+  nav.site{display:flex; gap:8px; flex-wrap:wrap}
+  nav.site a{
+    font-family:var(--font-body); font-size:14px; text-decoration:none; color:var(--ink);
+    border:1px solid var(--hairline-strong); border-radius:999px; padding:7px 15px;
+    background:var(--panel); transition:border-color .18s var(--ease-out), color .18s var(--ease-out);
   }
-  .mark{
-    display:inline-block; font-weight:700; letter-spacing:.02em; font-size:15px;
-    text-transform:uppercase; color:var(--muted); margin-bottom:14px;
-  }
+  nav.site a:hover{border-color:var(--rose-a55)}
+  nav.site a[aria-current]{color:var(--rose); border-color:var(--rose-a55)}
+
+  /* ── Title block ── */
+  .titleblock{margin:40px 0 8px}
   h1{
-    margin:.1em 0 .35em; font-size:34px; line-height:1.15; font-weight:800;
-    background:linear-gradient(90deg,var(--accent2),var(--accent),var(--gold));
-    -webkit-background-clip:text; background-clip:text; color:transparent;
+    font-family:var(--font-body); font-weight:700; font-size:30px; line-height:1.15;
+    margin:0 0 10px; color:var(--ink); text-wrap:balance;
   }
-  .eff{color:var(--muted); font-size:14px; margin:0}
-  nav.top{
-    display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:24px;
+  .meta{
+    font-family:var(--font-label); font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--ink3); margin:0;
   }
-  nav.top a{
-    font-size:14px; text-decoration:none; color:var(--ink);
-    border:1px solid var(--line); border-radius:999px; padding:7px 15px;
-    background:var(--panel); transition:border-color .15s;
-  }
-  nav.top a[aria-current]{border-color:var(--accent); color:var(--accent)}
-  nav.top a:hover{border-color:var(--accent2)}
+
   h2{
-    margin:44px 0 12px; font-size:21px; font-weight:700;
-    padding-top:12px; border-top:1px solid var(--line);
+    font-family:var(--font-body); font-weight:600; font-size:20px; color:var(--ink);
+    margin:44px 0 12px; padding-top:14px; border-top:1px solid var(--hairline);
+    scroll-margin-top:24px;
   }
-  h2:first-of-type{border-top:0}
-  h3{margin:26px 0 8px; font-size:16px; font-weight:700; color:var(--ink)}
-  p,li{color:var(--ink)}
-  a{color:var(--link)}
-  .lead{font-size:18px; color:var(--ink)}
+  h2:first-of-type{border-top:0; padding-top:0}
+  h3{font-family:var(--font-body); font-weight:600; font-size:16px; margin:26px 0 8px}
+  p{text-wrap:pretty}
+  strong{font-weight:600}
+  .lead{font-size:18px}
+  a{
+    color:var(--rose); text-decoration:underline; text-underline-offset:3px;
+    text-decoration-color:var(--rose-a35); transition:text-decoration-color .18s var(--ease-out);
+  }
+  a:hover{text-decoration-color:var(--rose)}
+  :focus-visible{outline:2px solid var(--rose); outline-offset:2px; border-radius:4px}
+
+  /* ── Callout: full hairline border on Panel (the meridiemCard recipe) ── */
   .callout{
-    background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent);
-    border-radius:12px; padding:16px 18px; margin:22px 0;
+    background:var(--panel); border:1px solid var(--hairline-strong);
+    border-radius:12px; padding:18px 20px; margin:24px 0;
   }
-  .callout strong{color:var(--accent)}
+  .callout strong:first-child{color:var(--rose)}
   ul{padding-left:22px} li{margin:6px 0}
-  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14.5px; display:block; overflow-x:auto}
-  th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top}
-  th{color:var(--muted); font-weight:600; white-space:nowrap}
-  footer{margin-top:56px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
-  code{background:var(--panel); border:1px solid var(--line); border-radius:5px; padding:1px 6px; font-size:13.5px}
+
+  /* ── Data table: mono instrument headers, hairline rows ── */
+  .tablewrap{overflow-x:auto; margin:16px 0}
+  table{width:100%; border-collapse:collapse; min-width:560px}
+  th{
+    font-family:var(--font-label); font-weight:400; font-size:11px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--ink2); text-align:left;
+    padding:10px 12px; border-bottom:1px solid var(--hairline-strong); white-space:nowrap;
+  }
+  td{font-size:14px; padding:12px; border-bottom:1px solid var(--hairline); vertical-align:top}
+  @media (max-width:560px){
+    .tablewrap{overflow:visible}
+    table{min-width:0}
+    thead{position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%)}
+    tr{
+      display:block; background:var(--panel); border:1px solid var(--hairline);
+      border-radius:12px; margin:14px 0; padding:6px 16px;
+    }
+    td{display:block; border-bottom:1px solid var(--hairline); padding:10px 0}
+    td:last-child{border-bottom:0}
+    td::before{
+      content:attr(data-label); display:block; font-family:var(--font-label);
+      font-size:10px; letter-spacing:.18em; text-transform:uppercase;
+      color:var(--ink2); margin-bottom:4px;
+    }
+  }
+
+  footer{
+    margin-top:56px; padding-top:20px; border-top:1px solid var(--hairline);
+    font-family:var(--font-label); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--ink3);
+  }
+  footer a{color:var(--ink2)}
+
+  @media (max-width:480px){ body{padding:0 20px 64px} h1{font-size:26px} }
+  @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
 </head>
 <body>
-<header class="hero">
-  <span class="mark">Meridiem</span>
-  <h1>Privacy Policy</h1>
-  <p class="eff">Effective&nbsp;19&nbsp;July&nbsp;2026 · Last updated&nbsp;19&nbsp;July&nbsp;2026</p>
-  <nav class="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <a class="brand" href="./" aria-label="Meridiem home">
+    <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="ms-sun" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0" stop-color="#2f7bf5"/><stop offset="0.41" stop-color="#2f7bf5"/>
+          <stop offset="0.5" stop-color="#6b50e0"/><stop offset="0.59" stop-color="#9a3fd8"/>
+          <stop offset="0.67" stop-color="#c93cc0"/><stop offset="0.75" stop-color="#ee4a9c"/>
+          <stop offset="0.82" stop-color="#ff5a82"/><stop offset="0.89" stop-color="#ff7a55"/>
+          <stop offset="0.95" stop-color="#ff9e3c"/><stop offset="1" stop-color="#ffd24a"/>
+        </linearGradient>
+        <clipPath id="ms-top"><rect x="0" y="0" width="512" height="296.96"/></clipPath>
+        <mask id="ms-bands">
+          <rect width="512" height="512" fill="white"/>
+          <rect x="90.419" y="147.546" width="331.162" height="7.526" fill="black"/>
+          <rect x="90.419" y="185.629" width="331.162" height="7.526" fill="black"/>
+          <rect x="90.419" y="217.559" width="331.162" height="7.526" fill="black"/>
+          <rect x="90.419" y="242.772" width="331.162" height="7.526" fill="black"/>
+          <rect x="90.419" y="267.984" width="331.162" height="7.526" fill="black"/>
+          <rect x="90.419" y="293.197" width="331.162" height="7.526" fill="black"/>
+        </mask>
+      </defs>
+      <g clip-path="url(#ms-top)"><circle cx="256" cy="269.865" r="150.528" fill="url(#ms-sun)" mask="url(#ms-bands)"/></g>
+    </svg>
+    <span class="wordmark">Meridiem</span>
+  </a>
+  <nav class="site" aria-label="Legal pages">
     <a href="./" aria-current="page">Privacy</a>
     <a href="terms.html">Terms of Use</a>
     <a href="support.html">Support</a>
   </nav>
 </header>
 
-<div class="wrap">
+<main id="main" class="wrap">
+  <div class="titleblock">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective 19 Jul 2026&ensp;·&ensp;Updated 19 Jul 2026</p>
+  </div>
+
   <p class="lead">Meridiem is built so your health data never leaves your control. This policy explains, in plain language, exactly what the app touches and where it goes.</p>
 
   <div class="callout">
-    <strong>The short version.</strong> Everything Meridiem calculates stays on your device. There are no accounts, no ads, no analytics, and no servers of ours — because we don't run any. Your skin type, exposure history, and limits sync only through your own private iCloud. We never see your data, and we never sell or share it.
+    <strong>The short version.</strong> Everything Meridiem calculates stays on your device. There are no accounts, no ads, no analytics, and no servers of ours, because we don't run any. Your skin type, exposure history, and limits sync only through your own private iCloud. We never see your data, and we never sell or share it.
   </div>
 
-  <h2>1. Who we are</h2>
+  <h2 id="who-we-are">1. Who we are</h2>
   <p>Meridiem ("the app") is developed and published by Connall Milberry ("we", "us", "our"). If you have any questions about this policy or your privacy, contact us at <a href="mailto:connall@milberry.net">connall@milberry.net</a>.</p>
 
-  <h2>2. Our approach: on-device by design</h2>
-  <p>Meridiem is a local-first app. The exposure engine runs entirely on your Apple Watch and iPhone. We do not operate any servers, we do not have a backend, and there is no Meridiem account to create. Data you might reasonably consider sensitive — your skin type, your sun-exposure history, your daily limits — is stored on your device and, if you use iCloud, in your own private Apple iCloud storage. It is never transmitted to us.</p>
+  <h2 id="on-device">2. Our approach: on-device by design</h2>
+  <p>Meridiem is a local-first app. The exposure engine runs entirely on your Apple Watch and iPhone. We do not operate any servers, we do not have a backend, and there is no Meridiem account to create. Data you might reasonably consider sensitive (your skin type, your sun-exposure history, your daily limits) is stored on your device and, if you use iCloud, in your own private Apple iCloud storage. It is never transmitted to us.</p>
 
-  <h2>3. Data the app uses</h2>
+  <h2 id="data">3. Data the app uses</h2>
   <p>To do its job, Meridiem reads the following on your device. In each case the data is used only to calculate and display your sun exposure and related metrics.</p>
 
-  <table>
-    <tr><th>Data</th><th>Source</th><th>Why it's used</th><th>Where it goes</th></tr>
-    <tr>
-      <td>Time in Daylight, Sleep, and Workout details (including the indoor/outdoor flag)</td>
-      <td>Apple HealthKit (read-only)</td>
-      <td>To measure how long you've been in daylight, detect when you wake for the morning check-in, and tell indoor from outdoor time</td>
-      <td>Stays on device. Never written back to Health, never sent to us</td>
-    </tr>
-    <tr>
-      <td>Approximate and precise location</td>
-      <td>Apple Core Location</td>
-      <td>To look up the real UV index where you are (via Apple WeatherKit) and to estimate elevation and indoor/outdoor status</td>
-      <td>Processed on device. Coordinates are sent to Apple to retrieve weather (see §4). Not stored or transmitted by us</td>
-    </tr>
-    <tr>
-      <td>UV index and forecast</td>
-      <td>Apple WeatherKit</td>
-      <td>To calculate your UV dose against your personal limit</td>
-      <td>Cached on device</td>
-    </tr>
-    <tr>
-      <td>Skin type, medication sensitivity, calibration responses, exposure history</td>
-      <td>You (during setup and use)</td>
-      <td>To build and refine your personal sun limit</td>
-      <td>Stored on device; optionally synced through your private iCloud</td>
-    </tr>
-  </table>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th scope="col">Data</th><th scope="col">Source</th><th scope="col">Why it's used</th><th scope="col">Where it goes</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Data">Time in Daylight, Sleep, and Workout details (including the indoor/outdoor flag)</td>
+          <td data-label="Source">Apple HealthKit (read-only)</td>
+          <td data-label="Why it's used">To measure how long you've been in daylight, detect when you wake for the morning check-in, and tell indoor from outdoor time</td>
+          <td data-label="Where it goes">Stays on device. Never written back to Health, never sent to us</td>
+        </tr>
+        <tr>
+          <td data-label="Data">Approximate and precise location</td>
+          <td data-label="Source">Apple Core Location</td>
+          <td data-label="Why it's used">To look up the real UV index where you are (via Apple WeatherKit) and to estimate elevation and indoor/outdoor status</td>
+          <td data-label="Where it goes">Processed on device. Coordinates are sent to Apple to retrieve weather (see §4). Not stored or transmitted by us</td>
+        </tr>
+        <tr>
+          <td data-label="Data">UV index and forecast</td>
+          <td data-label="Source">Apple WeatherKit</td>
+          <td data-label="Why it's used">To calculate your UV dose against your personal limit</td>
+          <td data-label="Where it goes">Cached on device</td>
+        </tr>
+        <tr>
+          <td data-label="Data">Skin type, medication sensitivity, calibration responses, exposure history</td>
+          <td data-label="Source">You (during setup and use)</td>
+          <td data-label="Why it's used">To build and refine your personal sun limit</td>
+          <td data-label="Where it goes">Stored on device; optionally synced through your private iCloud</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <h3>Health &amp; fitness data — our commitment</h3>
   <p>Meridiem's use of Apple HealthKit data is governed by Apple's requirements. We want to be explicit:</p>
@@ -141,21 +239,21 @@
     <li>Meridiem reads from Health only. It does not write any data into Apple Health.</li>
   </ul>
 
-  <h2>4. Third-party services</h2>
+  <h2 id="third-parties">4. Third-party services</h2>
   <p>Meridiem does not embed any third-party analytics, advertising, tracking, or crash-reporting software. The only external services it relies on are provided by Apple as part of the operating system:</p>
   <ul>
-    <li><strong>Apple WeatherKit</strong> — to fetch the UV index and forecast for your location. Your location is sent to Apple to return the weather. This is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a> and WeatherKit terms.</li>
-    <li><strong>Apple iCloud</strong> — if enabled on your device, your profile and history sync across your own devices through your private iCloud. This is Apple infrastructure tied to your Apple Account; we have no access to it. Governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+    <li><strong>Apple WeatherKit</strong>: fetches the UV index and forecast for your location. Your location is sent to Apple to return the weather. This is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a> and WeatherKit terms.</li>
+    <li><strong>Apple iCloud</strong>: if enabled on your device, your profile and history sync across your own devices through your private iCloud. This is Apple infrastructure tied to your Apple Account; we have no access to it. Governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
   </ul>
   <p>We receive nothing from these services about you.</p>
 
-  <h2>5. Notifications</h2>
-  <p>Meridiem can send you local notifications — for example, a heads-up before you reach your daily limit, an extreme-UV warning, or a sunscreen reapply reminder during a sun session. These are scheduled and delivered entirely on your device. No notification content is sent through any server of ours.</p>
+  <h2 id="notifications">5. Notifications</h2>
+  <p>Meridiem can send you local notifications: for example, a heads-up before you reach your daily limit, an extreme-UV warning, or a sunscreen reapply reminder during a sun session. These are scheduled and delivered entirely on your device. No notification content is sent through any server of ours.</p>
 
-  <h2>6. What we collect: nothing</h2>
+  <h2 id="what-we-collect">6. What we collect: nothing</h2>
   <p>We do not collect, receive, store, or have access to any personal data, usage data, or health data. Because Meridiem has no backend and no analytics, there is simply no channel through which your information could reach us. For Apple's App Privacy questionnaire, Meridiem's data is <strong>not collected</strong> by the developer and <strong>not used to track</strong> you.</p>
 
-  <h2>7. Data retention and deletion</h2>
+  <h2 id="retention">7. Data retention and deletion</h2>
   <p>Because your data lives on your device (and optionally in your iCloud), you are always in control:</p>
   <ul>
     <li><strong>Delete on-device data</strong> by deleting the app. This removes Meridiem's local storage.</li>
@@ -163,23 +261,21 @@
     <li><strong>Revoke access</strong> to Health or Location at any time in the iOS Settings app; the app continues to run with reduced functionality.</li>
   </ul>
 
-  <h2>8. Children's privacy</h2>
+  <h2 id="children">8. Children's privacy</h2>
   <p>Meridiem is not directed to children and does not knowingly collect information from children. As described above, we do not collect personal information from anyone.</p>
 
-  <h2>9. Your rights</h2>
-  <p>Depending on where you live, you may have rights under laws such as the GDPR (EU/UK) or the CCPA (California) to access, correct, or delete your personal data. Because we hold no personal data about you, there is nothing for us to retrieve, correct, or erase on our side — you already hold and control all of it on your own device and iCloud. We do not sell personal information.</p>
+  <h2 id="your-rights">9. Your rights</h2>
+  <p>Depending on where you live, you may have rights under laws such as the GDPR (EU/UK) or the CCPA (California) to access, correct, or delete your personal data. Because we hold no personal data about you, there is nothing for us to retrieve, correct, or erase on our side: you already hold and control all of it on your own device and iCloud. We do not sell personal information.</p>
 
-  <h2>10. Changes to this policy</h2>
+  <h2 id="changes">10. Changes to this policy</h2>
   <p>If we change this policy, we will update the "Last updated" date above and, where appropriate, note the change in the app or its App Store release notes. Continued use of Meridiem after a change means you accept the revised policy.</p>
 
-  <h2>11. Contact</h2>
+  <h2 id="contact">11. Contact</h2>
   <p>Questions, concerns, or requests? Email <a href="mailto:connall@milberry.net">connall@milberry.net</a> and we'll get back to you.</p>
 
   <footer>
-    Meridiem · Privacy Policy · © 2026 Connall Milberry ·
-    <a href="terms.html">Terms of Use</a> ·
-    <a href="support.html">Support</a>
+    Meridiem&ensp;·&ensp;Privacy Policy&ensp;·&ensp;© 2026 Connall Milberry&ensp;·&ensp;<a href="terms.html">Terms of Use</a>&ensp;·&ensp;<a href="support.html">Support</a>
   </footer>
-</div>
+</main>
 </body>
 </html>

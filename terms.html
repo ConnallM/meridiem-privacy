@@ -3,111 +3,202 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0A0A12">
 <title>Meridiem — Terms of Use</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='1'%20x2='0'%20y2='0'%3E%3Cstop%20offset='0'%20stop-color='%232f7bf5'/%3E%3Cstop%20offset='0.41'%20stop-color='%232f7bf5'/%3E%3Cstop%20offset='0.5'%20stop-color='%236b50e0'/%3E%3Cstop%20offset='0.59'%20stop-color='%239a3fd8'/%3E%3Cstop%20offset='0.67'%20stop-color='%23c93cc0'/%3E%3Cstop%20offset='0.75'%20stop-color='%23ee4a9c'/%3E%3Cstop%20offset='0.82'%20stop-color='%23ff5a82'/%3E%3Cstop%20offset='0.89'%20stop-color='%23ff7a55'/%3E%3Cstop%20offset='0.95'%20stop-color='%23ff9e3c'/%3E%3Cstop%20offset='1'%20stop-color='%23ffd24a'/%3E%3C/linearGradient%3E%3CclipPath%20id='c'%3E%3Crect%20x='0'%20y='0'%20width='512'%20height='296.96'/%3E%3C/clipPath%3E%3Cmask%20id='m'%3E%3Crect%20width='512'%20height='512'%20fill='white'/%3E%3Crect%20x='90.419'%20y='147.546'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3Crect%20x='90.419'%20y='185.629'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3Crect%20x='90.419'%20y='217.559'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3Crect%20x='90.419'%20y='242.772'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3Crect%20x='90.419'%20y='267.984'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3Crect%20x='90.419'%20y='293.197'%20width='331.162'%20height='7.526'%20fill='black'/%3E%3C/mask%3E%3C/defs%3E%3Cg%20clip-path='url(%23c)'%3E%3Ccircle%20cx='256'%20cy='269.865'%20r='150.528'%20fill='url(%23g)'%20mask='url(%23m)'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
+  /* ── Meridiem web tokens — mirrors DesignTokens.swift (Meridiem.Palette) ── */
   :root{
-    --bg:#0e0b1a; --panel:#171130; --ink:#ece9ff; --muted:#a49fd0;
-    --line:#2c2350; --accent:#ff5f9e; --accent2:#8a7bff; --gold:#ffcf5c; --link:#9fb4ff;
-  }
-  @media (prefers-color-scheme: light){
-    :root{ --bg:#f5f3ff; --panel:#ffffff; --ink:#1c1636; --muted:#5a5480; --line:#e4defb; --link:#5b46d6; }
+    --bg:#0A0A12;                        /* Palette.bg (Midnight) */
+    --panel:#111120;                     /* Palette.panel */
+    --panel2:#16162A;                    /* Palette.panel2 */
+    --hairline:rgba(255,255,255,.08);    /* Palette.border */
+    --hairline-strong:rgba(255,255,255,.16); /* Palette.borderStrong */
+    --ink:#E0E0F0;                       /* Palette.text */
+    --ink2:rgba(255,255,255,.55);        /* Palette.text2 */
+    --ink3:rgba(255,255,255,.50);        /* Palette.text3 */
+    --rose:#FF5A92;                      /* Palette.pink — the one ramp colour allowed on chrome */
+    --rose-a55:rgba(255,90,146,.55);
+    --rose-a35:rgba(255,90,146,.35);
+    --font-display:"Audiowide",sans-serif;         /* numbers & brand only */
+    --font-body:"Chakra Petch",-apple-system,sans-serif;
+    --font-label:"Share Tech Mono",ui-monospace,monospace;
+    --ease-out:cubic-bezier(.22,1,.36,1);
   }
   *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{margin:0; background:var(--bg); color:var(--ink);
-    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; padding:0 20px 80px;}
-  .wrap{max-width:720px; margin:0 auto}
-  header.hero{margin:0 -20px 40px; padding:56px 20px 40px; text-align:center;
-    background:radial-gradient(120% 140% at 50% -10%, rgba(138,123,255,.35), transparent 60%), linear-gradient(180deg,#201641,var(--bg));
-    border-bottom:1px solid var(--line);}
-  @media (prefers-color-scheme: light){
-    header.hero{background:radial-gradient(120% 140% at 50% -10%, rgba(138,123,255,.28), transparent 62%), linear-gradient(180deg,#efe9ff,var(--bg));}
+  html{background:var(--bg);-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:transparent; color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.7;
+    padding:0 24px 72px;
   }
-  .mark{display:inline-block; font-weight:700; letter-spacing:.02em; font-size:15px; text-transform:uppercase; color:var(--muted); margin-bottom:14px;}
-  h1{margin:.1em 0 .35em; font-size:34px; line-height:1.15; font-weight:800;
-    background:linear-gradient(90deg,var(--accent2),var(--accent),var(--gold));
-    -webkit-background-clip:text; background-clip:text; color:transparent;}
-  .eff{color:var(--muted); font-size:14px; margin:0}
-  nav.top{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:24px;}
-  nav.top a{font-size:14px; text-decoration:none; color:var(--ink); border:1px solid var(--line);
-    border-radius:999px; padding:7px 15px; background:var(--panel); transition:border-color .15s;}
-  nav.top a[aria-current]{border-color:var(--accent); color:var(--accent)}
-  nav.top a:hover{border-color:var(--accent2)}
-  h2{margin:44px 0 12px; font-size:21px; font-weight:700; padding-top:12px; border-top:1px solid var(--line);}
-  h2:first-of-type{border-top:0}
-  p,li{color:var(--ink)} a{color:var(--link)}
+  /* MeridiemSurface scanlines — backdrop only, per the design system */
+  body::before{
+    content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background:repeating-linear-gradient(to bottom, rgba(0,0,0,.18) 0 1px, transparent 1px 3px);
+    opacity:.35;
+  }
+  .skip{
+    position:absolute; left:-9999px; top:0; background:var(--panel2); color:var(--ink);
+    padding:10px 18px; border-radius:999px; z-index:10;
+  }
+  .skip:focus{left:24px; top:12px}
+  .wrap{max-width:720px; margin:0 auto}
+
+  header.site{
+    max-width:720px; margin:0 auto; padding:22px 0 18px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    border-bottom:1px solid var(--hairline);
+  }
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+  .brand svg{width:34px; height:34px; display:block}
+  .wordmark{font-family:var(--font-display); font-size:19px; color:var(--ink)}
+  nav.site{display:flex; gap:8px; flex-wrap:wrap}
+  nav.site a{
+    font-family:var(--font-body); font-size:14px; text-decoration:none; color:var(--ink);
+    border:1px solid var(--hairline-strong); border-radius:999px; padding:7px 15px;
+    background:var(--panel); transition:border-color .18s var(--ease-out), color .18s var(--ease-out);
+  }
+  nav.site a:hover{border-color:var(--rose-a55)}
+  nav.site a[aria-current]{color:var(--rose); border-color:var(--rose-a55)}
+
+  .titleblock{margin:40px 0 8px}
+  h1{
+    font-family:var(--font-body); font-weight:700; font-size:30px; line-height:1.15;
+    margin:0 0 10px; color:var(--ink); text-wrap:balance;
+  }
+  .meta{
+    font-family:var(--font-label); font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--ink3); margin:0;
+  }
+
+  h2{
+    font-family:var(--font-body); font-weight:600; font-size:20px; color:var(--ink);
+    margin:44px 0 12px; padding-top:14px; border-top:1px solid var(--hairline);
+    scroll-margin-top:24px;
+  }
+  h2:first-of-type{border-top:0; padding-top:0}
+  p{text-wrap:pretty}
+  strong{font-weight:600}
   .lead{font-size:18px}
-  .callout{background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--gold);
-    border-radius:12px; padding:16px 18px; margin:22px 0;}
-  .callout.warn{border-left-color:var(--accent)}
-  .callout strong{color:var(--gold)}
-  .callout.warn strong{color:var(--accent)}
+  a{
+    color:var(--rose); text-decoration:underline; text-underline-offset:3px;
+    text-decoration-color:var(--rose-a35); transition:text-decoration-color .18s var(--ease-out);
+  }
+  a:hover{text-decoration-color:var(--rose)}
+  :focus-visible{outline:2px solid var(--rose); outline-offset:2px; border-radius:4px}
+
+  /* ── Callout: full hairline border on Panel (the meridiemCard recipe) ── */
+  .callout{
+    background:var(--panel); border:1px solid var(--hairline-strong);
+    border-radius:12px; padding:18px 20px; margin:24px 0;
+  }
+  .callout strong:first-child{color:var(--rose)}
   ul{padding-left:22px} li{margin:6px 0}
-  footer{margin-top:56px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
+
+  footer{
+    margin-top:56px; padding-top:20px; border-top:1px solid var(--hairline);
+    font-family:var(--font-label); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--ink3);
+  }
+  footer a{color:var(--ink2)}
+
+  @media (max-width:480px){ body{padding:0 20px 64px} h1{font-size:26px} }
+  @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
 </head>
 <body>
-<header class="hero">
-  <span class="mark">Meridiem</span>
-  <h1>Terms of Use</h1>
-  <p class="eff">Effective&nbsp;19&nbsp;July&nbsp;2026 · Last updated&nbsp;19&nbsp;July&nbsp;2026</p>
-  <nav class="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <a class="brand" href="./" aria-label="Meridiem home">
+    <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="ms-sun" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0" stop-color="#2f7bf5"/><stop offset="0.41" stop-color="#2f7bf5"/>
+          <stop offset="0.5" stop-color="#6b50e0"/><stop offset="0.59" stop-color="#9a3fd8"/>
+          <stop offset="0.67" stop-color="#c93cc0"/><stop offset="0.75" stop-color="#ee4a9c"/>
+          <stop offset="0.82" stop-color="#ff5a82"/><stop offset="0.89" stop-color="#ff7a55"/>
+          <stop offset="0.95" stop-color="#ff9e3c"/><stop offset="1" stop-color="#ffd24a"/>
+        </linearGradient>
+        <clipPath id="ms-top"><rect x="0" y="0" width="512" height="296.96"/></clipPath>
+        <mask id="ms-bands">
+          <rect width="512" height="512" fill="white"/>
+          <rect x="90.419" y="147.546" width="331.162" height="7.526" fill="black"/>
+          <rect x="90.419" y="185.629" width="331.162" height="7.526" fill="black"/>
+          <rect x="90.419" y="217.559" width="331.162" height="7.526" fill="black"/>
+          <rect x="90.419" y="242.772" width="331.162" height="7.526" fill="black"/>
+          <rect x="90.419" y="267.984" width="331.162" height="7.526" fill="black"/>
+          <rect x="90.419" y="293.197" width="331.162" height="7.526" fill="black"/>
+        </mask>
+      </defs>
+      <g clip-path="url(#ms-top)"><circle cx="256" cy="269.865" r="150.528" fill="url(#ms-sun)" mask="url(#ms-bands)"/></g>
+    </svg>
+    <span class="wordmark">Meridiem</span>
+  </a>
+  <nav class="site" aria-label="Legal pages">
     <a href="./">Privacy</a>
     <a href="terms.html" aria-current="page">Terms of Use</a>
     <a href="support.html">Support</a>
   </nav>
 </header>
 
-<div class="wrap">
+<main id="main" class="wrap">
+  <div class="titleblock">
+    <h1>Terms of Use</h1>
+    <p class="meta">Effective 19 Jul 2026&ensp;·&ensp;Updated 19 Jul 2026</p>
+  </div>
+
   <p class="lead">These Terms of Use ("Terms") govern your use of the Meridiem app. By downloading or using Meridiem, you agree to them.</p>
 
-  <div class="callout warn">
+  <div class="callout">
     <strong>Meridiem is not a medical device.</strong> It provides estimates to help you make everyday decisions about sun exposure. It cannot detect sunburn, guarantee you won't burn, or replace professional medical or dermatological advice. Always use your own judgement, follow sun-safety guidance, and consult a qualified professional for any health concern.
   </div>
 
-  <h2>1. The app and who provides it</h2>
+  <h2 id="provider">1. The app and who provides it</h2>
   <p>Meridiem is provided by Connall Milberry ("we", "us"). It is distributed through the Apple App Store and runs on iPhone and Apple Watch. Contact: <a href="mailto:connall@milberry.net">connall@milberry.net</a>.</p>
 
-  <h2>2. Licence</h2>
+  <h2 id="licence">2. Licence</h2>
   <p>Meridiem is licensed, not sold, to you. Subject to these Terms and Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement (EULA)</a>, we grant you a personal, non-transferable, non-exclusive licence to use Meridiem on Apple-branded devices you own or control, as permitted by the App Store Usage Rules. Where these Terms and Apple's standard EULA differ, Apple's EULA governs the licence and these Terms cover everything else.</p>
 
-  <h2>3. Purchases</h2>
-  <p>Meridiem is a one-time purchase. There is no subscription and no account. Payments, refunds, and billing are handled entirely by Apple through the App Store under Apple's terms — we do not process payments or store any payment information. Refund requests are managed by Apple.</p>
+  <h2 id="purchases">3. Purchases</h2>
+  <p>Meridiem is a one-time purchase. There is no subscription and no account. Payments, refunds, and billing are handled entirely by Apple through the App Store under Apple's terms; we do not process payments or store any payment information. Refund requests are managed by Apple.</p>
 
-  <h2>4. What Meridiem is — and is not</h2>
-  <p>Meridiem estimates cumulative UV exposure by combining Apple Watch daylight data with the UV index for your location, measured against a personalised limit derived from your skin type. These are <strong>estimates</strong>. Real-world sunburn depends on many factors Meridiem cannot fully observe — clothing, shade, sunscreen application quality, reflective surfaces, individual variation, and sensor and forecast accuracy.</p>
+  <h2 id="estimates">4. What Meridiem is — and is not</h2>
+  <p>Meridiem estimates cumulative UV exposure by combining Apple Watch daylight data with the UV index for your location, measured against a personalised limit derived from your skin type. These are <strong>estimates</strong>. Real-world sunburn depends on many factors Meridiem cannot fully observe: clothing, shade, sunscreen application quality, reflective surfaces, individual variation, and sensor and forecast accuracy.</p>
   <ul>
     <li>Meridiem does not diagnose, treat, or prevent any medical condition, including skin cancer or sunburn.</li>
     <li>Do not rely on Meridiem as your only guide to sun safety. A quiet dial is not a substitute for sunscreen, cover, and shade.</li>
     <li>Vitamin D and other figures shown are informational estimates, not clinical measurements or medical advice.</li>
   </ul>
 
-  <h2>5. Acceptable use</h2>
+  <h2 id="acceptable-use">5. Acceptable use</h2>
   <p>You agree not to reverse engineer, decompile, resell, or redistribute the app except as permitted by law or Apple's Usage Rules, and not to use it in any unlawful way.</p>
 
-  <h2>6. Disclaimer of warranties</h2>
+  <h2 id="warranties">6. Disclaimer of warranties</h2>
   <p>Meridiem is provided "as is" and "as available", without warranties of any kind, whether express or implied, including fitness for a particular purpose and accuracy. We do not warrant that the app will be error-free, uninterrupted, or that its estimates will be accurate for your circumstances. Some jurisdictions do not allow the exclusion of certain warranties, so some of the above may not apply to you.</p>
 
-  <h2>7. Limitation of liability</h2>
-  <p>To the fullest extent permitted by law, we will not be liable for any injury, loss, or damage — including sunburn, skin damage, or any indirect, incidental, or consequential loss — arising from your use of, or reliance on, Meridiem. Your use of the app is at your own risk. Nothing in these Terms limits liability that cannot be limited by law.</p>
+  <h2 id="liability">7. Limitation of liability</h2>
+  <p>To the fullest extent permitted by law, we will not be liable for any injury, loss, or damage (including sunburn, skin damage, or any indirect, incidental, or consequential loss) arising from your use of, or reliance on, Meridiem. Your use of the app is at your own risk. Nothing in these Terms limits liability that cannot be limited by law.</p>
 
-  <h2>8. Apple's role</h2>
+  <h2 id="apple">8. Apple's role</h2>
   <p>These Terms are between you and us, not Apple. Apple is not responsible for the app or its content. Apple has no obligation to provide support or handle any claims relating to the app. However, Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.</p>
 
-  <h2>9. Changes</h2>
+  <h2 id="changes">9. Changes</h2>
   <p>We may update these Terms from time to time. We will change the "Last updated" date above, and material changes may be noted in the app or its release notes. Continued use after a change means you accept the revised Terms.</p>
 
-  <h2>10. Governing law</h2>
+  <h2 id="law">10. Governing law</h2>
   <p>These Terms are governed by the laws of the jurisdiction in which the developer is established, without regard to its conflict-of-laws rules, and subject to any mandatory consumer-protection rights you have where you live.</p>
 
-  <h2>11. Contact</h2>
+  <h2 id="contact">11. Contact</h2>
   <p>Questions about these Terms? Email <a href="mailto:connall@milberry.net">connall@milberry.net</a>.</p>
 
   <footer>
-    Meridiem · Terms of Use · © 2026 Connall Milberry ·
-    <a href="./">Privacy</a> ·
-    <a href="support.html">Support</a>
+    Meridiem&ensp;·&ensp;Terms of Use&ensp;·&ensp;© 2026 Connall Milberry&ensp;·&ensp;<a href="./">Privacy</a>&ensp;·&ensp;<a href="support.html">Support</a>
   </footer>
-</div>
+</main>
 </body>
 </html>
